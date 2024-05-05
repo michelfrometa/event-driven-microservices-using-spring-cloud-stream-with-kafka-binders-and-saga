@@ -1,0 +1,18 @@
+section:
+  playground
+spring:
+  cloud:
+    function:
+      definition: functionBinding #consumerBinding;
+    stream:
+      bindings:
+        consumer-binding-in-0:
+          destination: input-topic
+          group: some-group
+        function-binding-in-0:
+          destination: input-topic
+          group: some-group
+#      kafka:
+#        binder:
+#          brokers:
+#            - localhost:9092
